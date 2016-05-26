@@ -8,7 +8,9 @@
     <name>spring-webapp Maven Webapp</name>
 
     <properties>
+        <project.finalName>spring-webapp</project.finalName>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.8</jdk.version>
         <spring.version>4.2.6.RELEASE</spring.version>
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.13</slf4j.version>
@@ -359,7 +361,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>spring-webapp</finalName>
+        <finalName>${project.finalName}</finalName>
         <resources>
             <resource>
                 <directory>src/main/java</directory>
@@ -378,8 +380,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
                 </configuration>
             </plugin>
             <plugin>
