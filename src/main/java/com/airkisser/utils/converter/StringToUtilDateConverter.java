@@ -8,15 +8,13 @@ import java.util.Date;
 
 public class StringToUtilDateConverter implements Converter<String, Date> {
 
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
-
     public Date convert(String source) {
         if (source == null || source.isEmpty()) {
             return null;
         } else {
             Date date = null;
             try {
-                date = sdf.parse(source);
+                date = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").parse(source);
             } catch (ParseException e) {
                 e.printStackTrace();
             }

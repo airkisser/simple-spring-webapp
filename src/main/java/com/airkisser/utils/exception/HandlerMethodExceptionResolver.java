@@ -16,9 +16,9 @@ import java.util.Map;
 /**
  * 异常处理,能同时处理html和json格式的异常
  */
-public class HandlerMethodException implements HandlerExceptionResolver {
+public class HandlerMethodExceptionResolver implements HandlerExceptionResolver {
 
-    private static final Logger logger = LoggerFactory.getLogger(HandlerMethodException.class);
+    private static final Logger logger = LoggerFactory.getLogger(HandlerMethodExceptionResolver.class);
 
     public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handler, Exception e) {
         logger.error(e.getMessage(), e);

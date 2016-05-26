@@ -16,7 +16,7 @@
 
     <mvc:annotation-driven conversion-service="conversionService"/>
 
-    <bean class="com.airkisser.utils.exception.HandlerMethodException" id="exceptionHandler"/>
+    <bean class="com.airkisser.utils.exception.HandlerMethodExceptionResolver" id="exceptionHandler"/>
 
     <mvc:interceptors>
         <bean class="com.airkisser.utils.interceptor.LoggerInterceptor"/>
