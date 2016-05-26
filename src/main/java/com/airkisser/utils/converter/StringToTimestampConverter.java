@@ -13,8 +13,7 @@ public class StringToTimestampConverter implements Converter<String,Timestamp>{
             return null;
         }else {
             try{
-                Timestamp timestamp=Timestamp.valueOf(source);
-                return timestamp;
+                return Timestamp.valueOf(source);
             }
             catch (Exception e){
                 throw new RuntimeException("日期转换失败");

@@ -9,8 +9,7 @@ public class StringToDateConverter implements Converter<String, Date> {
         if (source == null || source.isEmpty()) {
             return null;
         } else {
-            Date date = Date.valueOf(source);
-            return date;
+            return Date.valueOf(source);
         }
     }
 }
