@@ -2,6 +2,12 @@ package com.airkisser.utils;
 
 import java.io.Serializable;
 
+/**
+ * Json内容封装
+ * @param <T> 返回的数据
+ *           如果出现异常，该参数将被置为null，message置为异常信息
+ *           返回状态success为异常标识，无异常为true
+ */
 public class JsonResult<T> implements Serializable {
     private static final long serialVersionUID = 4095512373698538582L;
 
