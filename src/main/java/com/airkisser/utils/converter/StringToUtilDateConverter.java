@@ -14,7 +14,10 @@ public class StringToUtilDateConverter implements Converter<String, Date> {
         } else {
             Date date = null;
             try {
-                date = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").parse(source);
+                if(source.matches("^\\d{4}-\\d{2}-\\d{2}$")){
+                    source = source + " 00:00:00";
+                }
+                date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(source);
             } catch (ParseException e) {
                 e.printStackTrace();
             }
